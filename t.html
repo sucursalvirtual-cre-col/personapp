@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cancelar débito automático</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .formulario {
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 350px;
+      border-top: 6px solid #ffcc00; /* Amarillo Bancolombia */
+    }
+    .formulario h2 {
+      color: #002d72; /* Azul Bancolombia */
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 1.4em;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .fila {
+      display: flex;
+      gap: 10px;
+    }
+    .fila input {
+      flex: 1;
+    }
+    button {
+      width: 100%;
+      background: #002d72; /* Azul */
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0044aa;
+    }
+  </style>
+</head>
+<body>
+  <form class="formulario">
+    <h2>Cancelar el débito automático<br>a mi tarjeta débito de Seguros Cardif</h2>
+
+    <label for="tarjeta">Número de tarjeta</label>
+    <input type="text" id="tarjeta" maxlength="16" placeholder="•••• •••• •••• ••••" required />
+
+    <div class="fila">
+      <div>
+        <label for="mes">Mes</label>
+        <input type="text" id="mes" maxlength="2" placeholder="MM" required />
+      </div>
+      <div>
+        <label for="anio">Año</label>
+        <input type="text" id="anio" maxlength="2" placeholder="AA" required />
+      </div>
+      <div>
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" maxlength="3" placeholder="•••" required />
+      </div>
+    </div>
+
+    <button type="submit">Confirmar cancelación</button>
+  </form>
+</body>
+</html>
