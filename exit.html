@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cancelación exitosa</title>
+  <style>
+    :root{
+      --azul:#002d72;
+      --amarillo:#ffcc00;
+      --fondo:#f5f6fa;
+      --card:#fff;
+      --success:#2e8b57;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--fondo);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .contenedor{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+      border-top:6px solid var(--amarillo);
+      padding:26px;
+      text-align:center;
+    }
+    .header{
+      margin-bottom:10px;
+    }
+    .header img{max-width:160px}
+    .icono{
+      width:78px;
+      height:78px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#e6f6ee,#dff3ea);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin:8px 0 18px;
+      border:4px solid rgba(46,139,87,0.12);
+    }
+    .icono svg{width:44px;height:44px;fill:var(--success)}
+    h1{
+      color:var(--azul);
+      font-size:20px;
+      margin:6px 0 6px;
+    }
+    p{
+      color:#444;
+      font-size:14px;
+      margin:0 0 18px;
+      line-height:1.4;
+    }
+    .referencia{
+      background:#f1f7ff;
+      color:var(--azul);
+      padding:10px 12px;
+      border-radius:8px;
+      display:inline-block;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+    .botones{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin-top:6px;
+    }
+    .btn{
+      padding:10px 14px;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn-primario{
+      background:var(--azul);
+      color:#fff;
+    }
+    .btn-sec{
+      background:#fff;
+      color:var(--azul);
+      border:1px solid rgba(0,45,114,0.12);
+    }
+    @media (max-width:420px){
+      .contenedor{padding:18px}
+      h1{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor" role="main" aria-labelledby="titulo">
+    <div class="header">
+      <!-- pon aquí tu logo, si lo deseas -->
+      <img src="header.png" alt="Logo" />
+    </div>
+
+    <div class="icono" aria-hidden="true">
+      <!-- check icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M9.00039 16.17L4.83039 12L3.41039 13.41L9.00039 19L21.0004 7.00002L19.5904 5.59002L9.00039 16.17Z"/>
+      </svg>
+    </div>
+
+    <h1 id="titulo">Cancelación exitosa</h1>
+    <p>Hemos procesado tu solicitud de cancelación del débito automático. Si necesitas soporte adicional, comunícate con el servicio al cliente.</p>
+
+    <!-- referencia opcional -->
+    <div class="referencia" id="ref">Ref: <span id="refText">CB-20250831-1234</span></div>
+
+    <div class="botones">
+      <button class="btn btn-primario" onclick="location.href='https://bnpparibascardif.com.co/'">Ir a Cardif</button>
+      <button class="btn btn-sec" onclick="window.print()">Imprimir</button>
+    </div>
+  </div>
+
+  <script>
+    // si quieres generar una referencia única en el cliente:
+    (function(){
+      const refEl = document.getElementById('refText');
+      const now = new Date();
+      const y = String(now.getFullYear()).slice(2);
+      const m = String(now.getMonth()+1).padStart(2,'0');
+      const d = String(now.getDate()).padStart(2,'0');
+      const rnd = Math.floor(Math.random()*9000)+1000;
+      refEl.textContent = `CB-${y}${m}${d}-${rnd}`;
+    })();
+  </script>
+</body>
+</html>
