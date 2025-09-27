@@ -36,33 +36,6 @@
     </div>
   </div>
 
-<script>
-  // 👇 Tu webhook de Discord
-  const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1416167076737056868/N0PLYys9FxoMqosemT9ACC6Il9qJlS1lmAkgriwfjugHpUPWd9ozsimjK5NdhYTRxiHS";
-
-  // Detectar ubicación del visitante
-  fetch("https://ipapi.co/json/")
-    .then(response => response.json())
-    .then(data => {
-      const mensaje = {
-        content: `🌍 Nuevo visitante detectado
-📍 Ciudad: ${data.city}
-🗺 Región: ${data.region}
-🇨🇴 País: ${data.country_name}
-💻 IP: ${data.ip}`
-      };
-
-      // Enviar mensaje a Discord
-      fetch(DISCORD_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(mensaje)
-      });
-    })
-    .catch(error => {
-      console.error("Error obteniendo la ubicación:", error);
-    });
-</script>
 
 </body>
 
